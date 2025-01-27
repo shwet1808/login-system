@@ -1,28 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Navigate, Route,Routes } from 'react-router-dom'
-import Login from './Pages/Login'
-import Signup from './Pages/Signup'
-import Home from './Pages/Home'
+import { Routes, Route } from 'react-router-dom';
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
+import Home from './Pages/Home';
+import IntroPage from './Pages/IntroPage';
+import Header from './Pages/Header';
+import Footer from './Pages/Footer';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Layout from './Layout';
 
 function App() {
-  
   return (
-  
-   <div className="App">
-
     <Routes>
-      <Route path="/" element = {<Navigate to ="/login" />} />
-      <Route path="/login" element ={<Login/>}/>
-      <Route path="/signup" element ={< Signup/>}/>
-      <Route path="/home" element ={<Home/>}/>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<IntroPage />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="about" element={<About />} />
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Signup />} />
+        <Route path="home" element={<Home />} />
+
+
+      </Route>
     </Routes>
-
-
-   </div>
-  )
+  );
 }
 
-export default App
+export default App;
