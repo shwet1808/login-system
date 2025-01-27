@@ -18,6 +18,9 @@ const Header = () => {
           <li style={styles.navItem}>
             <Link to="/contact" style={styles.navLink}>Contact</Link>
           </li>
+          <li style={styles.navItem}>
+            <Link to="/login" style={{ ...styles.navLink, ...styles.loginButton }}>Login</Link>
+          </li>
         </ul>
       </nav>
     </header>
@@ -31,10 +34,11 @@ const styles = {
     top: 0,
     left: 0,
     width: '100%',
-    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Dark transparent background
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // More pronounced shadow
+    height: '70px', // Increased height for more space
+    backgroundColor: 'rgba(0, 0, 0, 0.8)', // Darker transparent background for better contrast
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)', // Stronger shadow for a more polished look
     zIndex: 1000,
-    padding: '10px 0', // Padding for better spacing
+    padding: '0 20px', // Added padding for better spacing
   },
   nav: {
     display: 'flex',
@@ -42,17 +46,17 @@ const styles = {
     alignItems: 'center',
     maxWidth: '1200px', // Max width for better alignment
     margin: '0 auto', // Centering the nav
-    padding: '0 20px',
+    height: '100%',
   },
   logo: {
-    fontSize: '1.8rem',
+    fontSize: '2rem', // Increased font size for better visibility
     fontWeight: '700',
     color: '#fff',
   },
   logoLink: {
     textDecoration: 'none',
     color: '#fff',
-    letterSpacing: '1px', // Slight spacing for logo text
+    letterSpacing: '1px',
   },
   navList: {
     display: 'flex',
@@ -61,20 +65,30 @@ const styles = {
     padding: 0,
   },
   navItem: {
-    margin: '0 20px',
+    margin: '0 25px', // Added more space between items
   },
   navLink: {
     textDecoration: 'none',
-    color: '#fff', // White text for better contrast
-    fontSize: '1.1rem',
+    color: '#fff',
+    fontSize: '1.2rem', // Slightly larger text for readability
     fontWeight: '600',
-    textTransform: 'uppercase', // Uppercase links for a sleek design
-    letterSpacing: '0.5px',
-    transition: 'color 0.3s ease, transform 0.3s ease', // Smooth hover transitions
+    textTransform: 'uppercase',
+    letterSpacing: '1px', // Increased spacing for sleek design
+    transition: 'color 0.3s ease, transform 0.3s ease',
   },
   navLinkHover: {
     color: '#f39c12', // Gold color on hover
     transform: 'scale(1.1)', // Slight zoom effect on hover
+  },
+  loginButton: {
+    backgroundColor: '#28a745', // Green background for the login button
+    padding: '8px 20px', // Added padding for a button-like appearance
+    borderRadius: '5px', // Rounded corners for the button
+    fontWeight: '700', // Make the text bold for emphasis
+    transition: 'background-color 0.3s ease', // Smooth background color transition
+  },
+  loginButtonHover: {
+    backgroundColor: '#218838', // Darker green on hover
   },
 };
 

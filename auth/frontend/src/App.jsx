@@ -8,6 +8,7 @@ import Footer from './Pages/Footer';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Layout from './Layout';
+// import home from './Pages/Home';
 
 function App() {
   return (
