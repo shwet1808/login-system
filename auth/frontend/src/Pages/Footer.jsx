@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const Footer = () => {
   return (
@@ -22,9 +24,18 @@ const Footer = () => {
           </ul>
         </div>
         <div style={styles.socials}>
-          <a href="#" style={styles.socialIcon}>FB</a>
-          <a href="#" style={styles.socialIcon}>TW</a>
-          <a href="#" style={styles.socialIcon}>IG</a>
+          <a href="https://www.facebook.com" style={styles.socialIcon} target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-facebook-f"></i> {/* Facebook Icon */}
+          </a>
+          <a href="https://twitter.com" style={styles.socialIcon} target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-twitter"></i> {/* Twitter Icon */}
+          </a>
+          <a href="https://www.instagram.com" style={styles.socialIcon} target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-instagram"></i> {/* Instagram Icon */}
+          </a>
+          <a href="https://www.linkedin.com" style={styles.socialIcon} target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin-in"></i> {/* LinkedIn Icon */}
+          </a>
         </div>
       </div>
       <div style={styles.footerBottom}>
@@ -37,12 +48,12 @@ const Footer = () => {
 // Inline CSS styles for Footer
 const styles = {
   footer: {
-    backgroundColor: '#333', // Dark background
-    color: '#fff', // White text for contrast
-    padding: '20px 0', // Reduced padding for a compact footer
+    backgroundColor: '#333',
+    color: '#fff',
+    padding: '20px 0',
     textAlign: 'center',
     fontFamily: 'Arial, sans-serif',
-    width: '100%', // Full width
+    width: '100%',
   },
   container: {
     display: 'flex',
@@ -51,12 +62,12 @@ const styles = {
     maxWidth: '1200px',
     margin: '0 auto',
     padding: '0 20px',
-    flexWrap: 'wrap', // Allow items to wrap on smaller screens
+    flexWrap: 'wrap',
   },
   logo: {
     fontSize: '1.6rem',
     fontWeight: '700',
-    marginBottom: '10px', // Space between logo and links on small screens
+    marginBottom: '10px',
   },
   logoLink: {
     textDecoration: 'none',
@@ -66,7 +77,7 @@ const styles = {
   links: {
     display: 'flex',
     justifyContent: 'center',
-    marginBottom: '10px', // Space between links and social icons
+    marginBottom: '10px',
   },
   linkList: {
     display: 'flex',
@@ -83,9 +94,6 @@ const styles = {
     fontSize: '1rem',
     transition: 'color 0.3s',
   },
-  linkHover: {
-    color: '#f39c12', // Gold color on hover
-  },
   socials: {
     display: 'flex',
     justifyContent: 'center',
@@ -100,7 +108,7 @@ const styles = {
   footerBottom: {
     marginTop: '20px',
     borderTop: '1px solid #444',
-    paddingTop: '10px', // Reduced padding for compact footer
+    paddingTop: '10px',
   },
   footerText: {
     fontSize: '0.9rem',
@@ -109,19 +117,19 @@ const styles = {
   // Media queries for responsiveness
   '@media (max-width: 768px)': {
     footer: {
-      padding: '15px 0', // Further reduce padding on smaller screens
+      padding: '15px 0',
     },
     logo: {
-      fontSize: '1.4rem', // Smaller logo font size on mobile
+      fontSize: '1.4rem',
     },
     link: {
-      fontSize: '0.9rem', // Smaller font size for links on mobile
+      fontSize: '0.9rem',
     },
     socialIcon: {
-      fontSize: '1.2rem', // Smaller social icon font size
+      fontSize: '1.2rem',
     },
     footerText: {
-      fontSize: '0.8rem', // Smaller footer text on mobile
+      fontSize: '0.8rem',
     },
   },
 };

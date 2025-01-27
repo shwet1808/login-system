@@ -37,6 +37,8 @@ const styles = {
   contactContent: {
     background: 'rgba(0, 0, 0, 0.7)', // Transparent black background
     padding: '40px',
+    marginTop:'6%',
+    marginBottom:'30px',
     borderRadius: '10px',
     textAlign: 'center',
     width: '100%',
